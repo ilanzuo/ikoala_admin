@@ -1,0 +1,42 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		}
+	},
+	"create_date": {
+		"bsonType": "timestamp",
+		"description": "创建时间",
+		"forceDefaultValue": {
+			"$env": "now"
+		}
+	},
+	"type": {
+		"bsonType": "int",
+		"description": "纸盒:1001 冰袋 : 1002"
+	},
+	"userId": {
+		"bsonType": "int",
+		"description": "用户ID"
+	},
+	"count": {
+		"bsonType": "int",
+		"description": "数量"
+	},
+	"score": {
+		"bsonType": "int",
+		"description": "积分"
+	},
+	"state": {
+		"bsonType": "int",
+		"description": "未发布：4001 已删除：4002 待回收：2001 已回收：2002"
+	}
+}
